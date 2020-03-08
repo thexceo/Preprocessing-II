@@ -1,1 +1,26 @@
 // Mixins in here
+
+.btn-class(@backGround, @font-color) {
+    padding: 10px 60px;
+    border-radius: 10px;
+    background-color: @backGround;
+    color: @font-color;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken(@backGround, 10%);
+    }
+}
+
+.center(@justify, @align, @direction){
+	display: flex;
+	justify-content: @justify;
+    align-items: @align;
+    flex-direction: @direction;
+}
+
+.mobilealign(@direction) {
+    flex-direction: @direction;
+    width: 75%;
+    margin:auto;
+}
